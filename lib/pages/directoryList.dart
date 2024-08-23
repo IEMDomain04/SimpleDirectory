@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:account_directory/pages/subDirectory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-//import 'package:flutter_secure_file_storage/flutter_secure_file_storage.dart';
 
 class DirectoryList extends StatefulWidget {
   const DirectoryList({super.key});
@@ -14,7 +13,6 @@ class DirectoryList extends StatefulWidget {
 
 class _DirectoryListState extends State<DirectoryList> {
   final FlutterSecureStorage _secureStorage = FlutterSecureStorage();
-  //final FlutterSecureFileStorage _fileStorage = FlutterSecureFileStorage();
   List<String> directories = [];
 
   @override
