@@ -129,12 +129,15 @@ class _DirectoryListState extends State<DirectoryList> {
     );
   }
 
+  //Intructions about the App
+  void _appDirectoryInstructions() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF371375),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 175, 129, 255),
+        backgroundColor: Color.fromARGB(255, 43, 153, 0),
         title: Text("Directory List", style: TextStyle(color: Colors.black)),
       ),
       body: ListView.builder(

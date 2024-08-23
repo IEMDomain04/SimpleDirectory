@@ -167,7 +167,7 @@ class _SubDirectoryListState extends State<SubDirectoryList> {
     return Scaffold(
       backgroundColor: Color(0xFF371375),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 191, 154, 255),
+        backgroundColor: Color.fromARGB(255, 43, 153, 0),
         title: Text(widget.directory),
       ),
       body: ListView.builder(
