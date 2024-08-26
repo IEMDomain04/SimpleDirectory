@@ -140,10 +140,19 @@ class _DirectoryListState extends State<DirectoryList> {
         backgroundColor: Color.fromARGB(255, 43, 153, 0),
         title: Text("Directory List", style: TextStyle(color: Colors.black)),
       ),
-      body: ListView.builder(
-        itemCount: directories.length,
-        itemBuilder: (context, index) {
+      body: ReorderableListView(
+        onReorder: (oldIndex, newIndex) {
+          setState(() {
+            if (newIndex > oldIndex) {
+              newIndex -= 1;
+            }
+            final item = directories.removeAt(oldIndex);
+            directories.insert(newIndex, item);
+          });
+        },
+        children: List.generate(directories.length, (index) {
           return ListTile(
+            key: ValueKey(directories[index]),
             title: Text(
               directories[index],
               style: TextStyle(color: Colors.white),
@@ -163,7 +172,7 @@ class _DirectoryListState extends State<DirectoryList> {
               ],
             ),
           );
-        },
+        }),
       ),
       bottomNavigationBar: BottomAppBar(
         color: Color(0xFF371375),
